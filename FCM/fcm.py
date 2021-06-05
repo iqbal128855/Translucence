@@ -38,6 +38,7 @@ from cdt.causality.graph import CGNN
 Cgnn = CGNN(nruns=1, train_epochs=1, test_epochs=1, batch_size=100)
 
 dgraph = Cgnn.orient_directed_graph(data, ograph)
+print (dgraph)
 print (dgraph.edges())
-cdf = pd.DataFrame(list(dgraph.edges(data='weight')), columns=['Cause', 'Effect', 'Score'])
+#cdf = pd.DataFrame(list(dgraph.edges(data='weight')), columns=['Cause', 'Effect', 'Score'])
 print (cdf)
